@@ -14,6 +14,7 @@ const AddForm = (props) => {
     // const errorMessage = "";
 
     const handleChange = e => {
+        console.log('handling change')
         setState({
             ...state,
             [e.target.name]:e.target.value
@@ -21,6 +22,7 @@ const AddForm = (props) => {
     }
 
     const handleSubmit = e => {
+        console.log('about to submit')
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
             //dispatch a custom error action

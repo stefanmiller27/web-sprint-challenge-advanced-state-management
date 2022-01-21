@@ -7,7 +7,7 @@ export const initialState = {
         name: '',
         position: '',
         nickname: '',
-        description: '',
+        description: ''
     }],
     isLoading: false,
     error: ''
@@ -46,8 +46,11 @@ const reducer = (state = initialState, action)=>{
                 ...state,
                 error: action.payload
             })
+        default:
+            return state;
     }
 }
+
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
 export default reducer;
